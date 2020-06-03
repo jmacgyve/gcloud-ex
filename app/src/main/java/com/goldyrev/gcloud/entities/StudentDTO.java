@@ -47,16 +47,16 @@ public class StudentDTO {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long studentPersonalId;
 
-    @Column
+    @Column(name = "student_name", nullable = false)
     private String studentName;
 
-    @Column
+    @Column(name = "student_second_name", nullable = false)
     private String studentSecondName;
 
-    @Column
+    @Column(name = "student_groupid", nullable = false)
     private String studentGroupCode;
 
     @Override
