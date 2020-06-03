@@ -1,0 +1,6 @@
+com/goldyrev/gcloud/GcloudApplication.class
+com/goldyrev/gcloud/services/StudentService.class
+com/goldyrev/gcloud/controllers/StudentController.class
+com/goldyrev/gcloud/entityRepository/StudentRepository.class
+com/goldyrev/gcloud/swagger/SwaggerConfig.class
+com/goldyrev/gcloud/entities/StudentDTO.class
