@@ -17,9 +17,8 @@ public class StudentController {
     private StudentService studentService;
 
     @GetMapping("/")
-    public String welcomePage(){
-        System.out.println("welcome root page");
-        return "welcome";
+    public ResponseEntity<String> healthcheck() {
+        return ResponseEntity.ok("");
     }
 
     @GetMapping("students/all")
@@ -49,6 +48,4 @@ public class StudentController {
     public ResponseEntity<String> addStudent(@RequestParam StudentDTO studentDTO){
         return new ResponseEntity<>(studentService.addStudent(studentDTO), OK);
     }
-
-
 }
