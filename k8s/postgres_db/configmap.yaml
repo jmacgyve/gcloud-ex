@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+  labels:
+    app: db
+data:
+  POSTGRES_DB: feed_db
+  POSTGRES_USER: feed_admin
+  POSTGRES_PASSWORD: qwerty123456
