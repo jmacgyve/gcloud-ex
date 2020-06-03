@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@Configuration
 public class StudentService {
 
     @Autowired
