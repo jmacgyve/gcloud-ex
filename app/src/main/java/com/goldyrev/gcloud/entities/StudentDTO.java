@@ -13,6 +13,8 @@ public class StudentDTO {
         this.studentGroupCode = studentGroupCode;
     }
 
+    public StudentDTO() {
+    }
 
     public Long getStudentPersonalId() {
         return studentPersonalId;

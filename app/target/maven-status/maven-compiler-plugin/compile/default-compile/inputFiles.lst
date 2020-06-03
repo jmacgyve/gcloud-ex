@@ -1,5 +1,6 @@
 /Users/bootcamp/Desktop/gcloud-ex/app/src/main/java/com/goldyrev/gcloud/entityRepository/StudentRepository.java
 /Users/bootcamp/Desktop/gcloud-ex/app/src/main/java/com/goldyrev/gcloud/entities/StudentDTO.java
 /Users/bootcamp/Desktop/gcloud-ex/app/src/main/java/com/goldyrev/gcloud/services/StudentService.java
+/Users/bootcamp/Desktop/gcloud-ex/app/src/main/java/com/goldyrev/gcloud/swagger/SwaggerConfig.java
 /Users/bootcamp/Desktop/gcloud-ex/app/src/main/java/com/goldyrev/gcloud/GcloudApplication.java
 /Users/bootcamp/Desktop/gcloud-ex/app/src/main/java/com/goldyrev/gcloud/controllers/StudentController.java
