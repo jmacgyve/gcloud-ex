@@ -14,14 +14,12 @@ public class StudentService {
     @Autowired
     private StudentRepository studentRepository;
 
-    public String addStudent(StudentDTO studentDTO){
-        studentRepository.save(studentDTO);
-        return "[addStudent] Student " + studentDTO + " added.";
+    public StudentDTO addStudent(StudentDTO studentDTO){
+        return studentRepository.save(studentDTO);
     }
 
-    public String deleteStudentByPersonalId(Long id){
+    public void deleteStudentByPersonalId(Long id){
         studentRepository.deleteById(id);
-        return "[deleteStudentByPersonalId] Student with personalID " + id + " deleted.";
     }
 
     public StudentDTO getStudentById(Long id){

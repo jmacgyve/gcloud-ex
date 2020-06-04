@@ -40,16 +40,19 @@ public class StudentController {
     }
 
     @DeleteMapping("student/delete/{id}")
-    public ResponseEntity<String> deleteStudentById(@PathVariable("id") Long id){
-       return new ResponseEntity<>(studentService.deleteStudentByPersonalId(id), OK);
+    public void deleteStudentById(@PathVariable("id") Long id){
+       studentService.deleteStudentByPersonalId(id);
     }
 
     @PostMapping("student/add")
-    public void addStudent(@RequestParam("studentPersonalId") Long studentPersonalId,
-                                             @RequestParam("studentName") String studentName,
-                                             @RequestParam("studentSecondName") String studentSecondName,
-                                             @RequestParam("studentGroupCode") String studentGroupCode){
-        StudentDTO studentDTO = new StudentDTO(studentPersonalId, studentName, studentSecondName, studentGroupCode);
-        studentService.addStudent(studentDTO);
+    public StudentDTO addStudent(@RequestBody StudentDTO studentDTO){
+        return studentService.addStudent(studentDTO);
     }
+//    public void addStudent(@RequestParam("studentPersonalId") Long studentPersonalId,
+//                                             @RequestParam("studentName") String studentName,
+//                                             @RequestParam("studentSecondName") String studentSecondName,
+//                                             @RequestParam("studentGroupCode") String studentGroupCode){
+//        StudentDTO studentDTO = new StudentDTO(studentPersonalId, studentName, studentSecondName, studentGroupCode);
+//        studentService.addStudent(studentDTO);
+//    }
 }
