@@ -28,9 +28,9 @@ public class StudentController {
     }
 
     @GetMapping("student/{id}")
-    public ResponseEntity<StudentDTO> studentById(@PathVariable("id") Long id) {
-        StudentDTO studentById = studentService.getStudentById(id);
-        return new ResponseEntity<>(studentById, OK);
+    public ResponseEntity<List<StudentDTO>> studentById(@PathVariable("id") Long id) {
+        List<StudentDTO> student = studentService.getStudentById(id);
+        return new ResponseEntity<>(student, OK);
     }
 
     @GetMapping("student/all/{group}")

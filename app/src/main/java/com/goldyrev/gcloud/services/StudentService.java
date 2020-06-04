@@ -23,7 +23,7 @@ public class StudentService {
         return "[deleteStudentByPersonalId] Student with personalID " + id + " deleted.";
     }
 
-    public StudentDTO getStudentById(Long id){
+    public List<StudentDTO> getStudentById(Long id){
         return studentRepository.findByStudentPersonalId(id);
     }
 
