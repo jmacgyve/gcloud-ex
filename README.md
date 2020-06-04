@@ -16,6 +16,13 @@ API Example
 
 4) Post New Student http://34.72.104.179:8080/student/add
 
+{
+  "studentPersonalId": 1,
+  "studentName": "Eugene",
+  "studentSecondName": "Goldyrev",
+  "studentGroupCode": "M05-916v"
+}
+
 5) Delete Student By Id http://34.72.104.179:8080/student/delete/{id}
 
 
