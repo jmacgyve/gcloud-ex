@@ -8,9 +8,9 @@ kubectl apply -f k8s
 
 API Example
 
-1) Get All Students http://34.72.104.179:8080/students/all
+1) Get All Students http://34.72.104.179:8080/student/all
 
-2) Get Student by ID http://34.72.104.179:8080/students/{id}
+2) Get Student by ID http://34.72.104.179:8080/student/{id}
 
 3) Get All Student By Group http://34.72.104.179:8080/student/all/{group}
 
