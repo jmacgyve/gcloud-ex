@@ -8,6 +8,7 @@ import java.util.List;
 
 @Repository
 public interface StudentRepository extends JpaRepository<StudentDTO, Long> {
-    List<StudentDTO> findAllByStudentGroupCode(String studentGroupCode);
     //here u can add personal methods
+    List<StudentDTO> findAllByStudentGroupCode(String studentGroupCode);
+    StudentDTO findByStudentPersonalId(Long id);
 }
