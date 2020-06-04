@@ -27,3 +27,6 @@ API Example
 
 
 DockerHub https://hub.docker.com/repository/docker/jmacgyve/tpos2goldyrev
+
+
+Запросы можно сделать здесь https://reqbin.com
