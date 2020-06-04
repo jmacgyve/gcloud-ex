@@ -44,15 +44,15 @@ public class StudentController {
        studentService.deleteStudentByPersonalId(id);
     }
 
-    @PostMapping("student/add")
-    public StudentDTO addStudent(@RequestBody StudentDTO studentDTO){
-        return studentService.addStudent(studentDTO);
-    }
-//    public void addStudent(@RequestParam("studentPersonalId") Long studentPersonalId,
-//                                             @RequestParam("studentName") String studentName,
-//                                             @RequestParam("studentSecondName") String studentSecondName,
-//                                             @RequestParam("studentGroupCode") String studentGroupCode){
-//        StudentDTO studentDTO = new StudentDTO(studentPersonalId, studentName, studentSecondName, studentGroupCode);
-//        studentService.addStudent(studentDTO);
+    @PostMapping(path = "student/add", consumes = "application/json", produces = "application/json")
+//    public ResponseEntity<StudentDTO> addStudent(@RequestBody StudentDTO studentDTO){
+//        return new ResponseEntity<>(studentService.addStudent(studentDTO), OK);
 //    }
+    public ResponseEntity<StudentDTO> addStudent(@RequestParam("studentPersonalId") Long studentPersonalId,
+                                             @RequestParam("studentName") String studentName,
+                                             @RequestParam("studentSecondName") String studentSecondName,
+                                             @RequestParam("studentGroupCode") String studentGroupCode){
+        StudentDTO studentDTO = new StudentDTO(studentPersonalId, studentName, studentSecondName, studentGroupCode);
+        return new ResponseEntity<>(studentService.addStudent(studentDTO), OK);
+    }
 }
