@@ -45,7 +45,11 @@ public class StudentController {
     }
 
     @PostMapping("student/add")
-    public ResponseEntity<String> addStudent(@RequestBody StudentDTO studentDTO){
-        return new ResponseEntity<>(studentService.addStudent(studentDTO), OK);
+    public void addStudent(@RequestParam("studentPersonalId") Long studentPersonalId,
+                                             @RequestParam("studentName") String studentName,
+                                             @RequestParam("studentSecondName") String studentSecondName,
+                                             @RequestParam("studentGroupCode") String studentGroupCode){
+        StudentDTO studentDTO = new StudentDTO(studentPersonalId, studentName, studentSecondName, studentGroupCode);
+        studentService.addStudent(studentDTO);
     }
 }
