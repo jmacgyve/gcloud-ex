@@ -21,13 +21,13 @@ public class StudentController {
         return ResponseEntity.ok("");
     }
 
-    @GetMapping("students/all")
+    @GetMapping("student/all")
     public ResponseEntity<List<StudentDTO>> allStudents() {
         List<StudentDTO> allStudents = studentService.getAllStudents();
         return new ResponseEntity<>(allStudents, OK);
     }
 
-    @GetMapping("students/{id}")
+    @GetMapping("student/{id}")
     public ResponseEntity<StudentDTO> studentById(@PathVariable("id") Long id) {
         StudentDTO studentById = studentService.getStudentById(id);
         return new ResponseEntity<>(studentById, OK);
@@ -40,12 +40,13 @@ public class StudentController {
     }
 
     @DeleteMapping("student/delete/{id}")
-    public void deleteStudentById(@PathVariable("id") Long id) {
-        studentService.deleteStudentByPersonalId(id);
+    public ResponseEntity<String>deleteStudentById(@PathVariable("id") Long id) {
+        return new ResponseEntity<>(studentService.deleteStudentByPersonalId(id), OK);
     }
 
-    @PostMapping(path = "student/add/")
+    @PostMapping(path = "student/add")
     public ResponseEntity<StudentDTO> addStudent(@RequestBody StudentDTO studentDTO) {
+        System.out.println("student added");
         return new ResponseEntity<>(studentService.addStudent(studentDTO), OK);
     }
 //    public ResponseEntity<StudentDTO> addStudent(@RequestParam("id") Long studentPersonalId,

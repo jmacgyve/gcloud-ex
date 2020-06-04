@@ -18,8 +18,9 @@ public class StudentService {
         return studentRepository.save(studentDTO);
     }
 
-    public void deleteStudentByPersonalId(Long id){
+    public String deleteStudentByPersonalId(Long id){
         studentRepository.deleteById(id);
+        return "[deleteStudentByPersonalId] Student with personalID " + id + " deleted.";
     }
 
     public StudentDTO getStudentById(Long id){
